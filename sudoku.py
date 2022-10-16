@@ -24,7 +24,7 @@ puzzleToSolve =  [[5,3, 0, 0, 7, 0, 0, 0, 0],
                   [0, 0, 0, 0, 8, 0, 0, 7, 9]]
                   
 # print sudoku problem
-print("Sudoku Problem")
+st.write("Sudoku Problem")
 for r in range(len(puzzleToSolve)):
     if r == 0 or r == 3 or r == 6:
         print("+-------+-------+-------+")
