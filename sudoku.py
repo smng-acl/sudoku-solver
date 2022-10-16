@@ -24,20 +24,20 @@ puzzleToSolve =  [[5,3, 0, 0, 7, 0, 0, 0, 0],
                   [0, 0, 0, 0, 8, 0, 0, 7, 9]]
                   
 # print sudoku problem
-st.write("Sudoku Problem")
+st.write("Problem")
 for r in range(len(puzzleToSolve)):
     if r == 0 or r == 3 or r == 6:
-        print("+-------+-------+-------+")
+        st.write("+-------+-------+-------+")
     for c in range(len(puzzleToSolve[r])):
         if c == 0 or c == 3 or c ==6:
-            print("| ", end = "")
+            st.write("| ", end = "")
         if puzzleToSolve[r][c] != 0:
-            print(puzzleToSolve[r][c], end = " ")
+            st.write(puzzleToSolve[r][c], end = " ")
         else:
-            print(end = "  ")
+            st.write(end = "  ")
         if c == 8:
-            print("|")
-print("+-------+-------+-------+")
+            st.write("|")
+st.write("+-------+-------+-------+")
 
 # A list of strings from 1 to 9 is created
 Sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9]
