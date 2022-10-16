@@ -33,7 +33,7 @@ for r in range(len(puzzleToSolve)):
         if c == 0 or c == 3 or c ==6:
             st_row += "| "
         if puzzleToSolve[r][c] != 0:
-            st_row += puzzleToSolve[r][c] + " "
+            st_row += str(puzzleToSolve[r][c]) + " "
         else:
             st_row += "  "
         if c == 8:
