@@ -1,4 +1,7 @@
 ﻿from pulp import *
+import streamlit as st
+
+st.title("sudoku solver")
 
 puzzleToSolve =  [[8, 0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 3, 6, 0, 0, 0, 0, 0],
