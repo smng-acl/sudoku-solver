@@ -28,15 +28,17 @@ st.write("Problem")
 for r in range(len(puzzleToSolve)):
     if r == 0 or r == 3 or r == 6:
         st.write("+-------+-------+-------+")
+    st_row = ""
     for c in range(len(puzzleToSolve[r])):
         if c == 0 or c == 3 or c ==6:
-            st.write("| ", end = "")
+            st_row += "| "
         if puzzleToSolve[r][c] != 0:
-            st.write(puzzleToSolve[r][c], end = " ")
+            st_row += puzzleToSolve[r][c] + " "
         else:
-            st.write(end = "  ")
+            st_row += "  "
         if c == 8:
-            st.write("|")
+            st_row += "|"
+    st.write(st_row)
 st.write("+-------+-------+-------+")
 
 # A list of strings from 1 to 9 is created
