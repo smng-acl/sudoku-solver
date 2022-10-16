@@ -92,20 +92,22 @@ for r in range(len(puzzleToSolve)):
 prob.solve()
 
 # The status of the solution is printed to the screen
-print("Status:", LpStatus[prob.status])
+st.write("Status:", LpStatus[prob.status])
 
 # print out sudoku solution
-print("\nSudoku Solution")
+st.write("\nSudoku Solution")
 for r in Rows:
     if r == 1 or r == 4 or r == 7:
-        print("+-------+-------+-------+")
+        st.write("+-------+-------+-------+")
+    st_row = ""
     for c in Cols:
         for v in Vals:
             if choices[v][r][c].varValue == 1:               
                 if c == 1 or c == 4 or c == 7:
-                    print("| ", end = "")
-                print(v, end = " ")
+                    st_row += "| "
+                st_row += str(v) + " "
                 
                 if c == 9:
-                    print("|")
-print("+-------+-------+-------+")
+                    st_row += "|"
+    st.write(st_row)
+st.write("+-------+-------+-------+")
